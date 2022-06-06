@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <title>我的简历</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        list-style: none;
+      }
+
+      body {
+        background: #eee;
+        margin: 20px 0;
+      }
+
+      article {
+        width: 21cm;
+        min-height: 29.7cm;
+        background: white;
+        margin: 0 auto;
+        overflow: auto;
+        padding: 1em;
+      }
+    </style>
+    <style media="print">
+      body {
+        margin: 0;
+      }
+
+      .page2 {
+        page-break-before: always;
+        margin-top: 30px;
+      }
+    </style>
+    <style>
+      body {
+      }
+
+      p {
+        margin: 0.3em 0;
+      }
+
+      h1 {
+        font-size: 25px;
+        margin-top: 0;
+      }
+
+      h4,
+      h5,
+      h6 {
+        font-weight: normal;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      strong {
+        font-weight: normal;
+        /* color: #27c36e; */
+        /* color: #3fb580; */
+      }
+
+      a {
+        color: #999;
+        text-decoration: none;
+        border-bottom: 1px solid;
+      }
+
+      .blog {
+        /* color: #5869da; */
+        font-weight: 500;
+        color: #f60;
+      }
+
+      p,
+      li {
+        color: #666;
+      }
+
+      strong {
+        font-weight: normal;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+      }
+
+      .bio {
+        position: relative;
+      }
+
+      .bio img {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+
+    <style>
+      .projects {
+      }
+
+      .projects p {
+        color: #666;
+      }
+
+      .projects strong {
+        color: #f60;
+        /* color: #27c36e; */
+        /* color: #08bd6b; */
+      }
+
+      .projects > ol {
+        margin-top: 0;
+        list-style-position: inside;
+        padding: 0;
+      }
+
+      .projects > ol > li {
+        margin-bottom: 24px;
+      }
+
+      .projects > ol > li > header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .projects > ol > li h3 {
+        display: inline-block;
+      }
+    </style>
+    <style>
+      .skills {
+      }
+
+      #skills {
+        width: 500px;
+        height: 270px;
+      }
+      @media print {
+        #skills {
+          display: none;
+        }
+      }
+
+      .skills > .wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .skills > .wrapper > :first-child {
+        margin-right: 24px;
+      }
+
+      .skills > .wrapper > #skills {
+      }
+
+      .skills > .wrapper > ul {
+        color: #666;
+      }
+
+      .skills > .wrapper strong {
+        color: #f60;
+      }
+
+      .skills > .wrapper > ul > li {
+        line-height: 1.2;
+        margin-bottom: 8px;
+      }
+    </style>
+    <style>
+      .openSource {
+      }
+
+      .openSource > h2 {
+      }
+
+      .openSource header img {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .openSource > ul {
+      }
+
+      .openSource > ul > li {
+        margin-bottom: 24px;
+      }
+
+      .openSource header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .openSource h3 {
+      }
+    </style>
+    <style>
+      .jobs {
+      }
+
+      .jobs > h2 {
+      }
+
+      .jobs > ol {
+      }
+
+      .jobs > ol > li {
+        margin: 12px 0;
+      }
+
+      .jobs header {
+        display: flex;
+        color: #666;
+        margin-bottom: 12px;
+      }
+
+      .jobs header > h3 {
+        font-size: 18px;
+        color: #333;
+      }
+
+      .jobs header > h4 {
+        margin-left: 1em;
+        font-size: 18px;
+      }
+
+      .jobs header > span {
+        font-size: 18px;
+        margin-left: auto;
+      }
+    </style>
+
+    <style>
+      @media (max-width: 500px) {
+        body {
+          margin: 0;
+        }
+
+        article {
+          width: auto;
+          height: auto;
+        }
+
+        .bio img {
+          display: none;
+        }
+
+        .skills .wrapper {
+          flex-direction: column;
+        }
+
+        #skills {
+          width: auto;
+        }
+        .jobs header {
+          flex-direction: column;
+        }
+        .jobs header > h3,
+        .jobs header > h4,
+        .jobs header > span {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <article>
+      <section class="bio">
+        <h1>李骁</h1>
+        <img src="./images/头像.png" alt="" width="100" height="100" />
+        <p>男 | 28岁 | 本科 | 前端开发工程师</p>
+        <p>手机：18780352791 | 微信：18780352791 | 邮箱：1643565650@qq.com</p>
+        <li>
+          <strong
+            ><a class="blog" href="https://www.yuque.com/nfcjg?tab=books"
+              >博客</a
+            ></strong
+          >
+          ，目前已有 64 篇技术文章
+        </li>
+        <li>
+          <a class="blog" href="https://github.com/Lixianlai-2">GitHub</a
+          >，过去1年有 370 次提交
+        </li>
+      </section>
+
+      <section class="projects">
+        <h2>项目经历</h2>
+        <ol>
+          <li>
+            <header>
+              <h3>先来记账</h3>
+              <span>
+                <a href="https://github.com/Lixianlai-2/Wealth-assistant"
+                  >源码链接</a
+                >
+                <a
+                  href="https://lixianlai-2.github.io/wealth-assistant-website/#/money"
+                  >项目预览</a
+                >
+              </span>
+            </header>
+            <p>
+              先来记账是一款简洁记账应用，它是基于 <strong>Vue</strong> /
+              <strong>TypeScript</strong>/ 的移动端单页面应用
+            </p>
+            <p>
+              <strong>功能</strong>
+              ：它实现了快速记账，备注编写，标签选择与创建，标签修改与删除，收支统计等功能
+            </p>
+            <p>技术栈：本项目使用到了Vue2 + TypeScript + Vuex + SVG + SCSS</p>
+            <p>
+              由本人独立实现，实现过程中遇到了一些<strong>Webpack</strong>/
+              <strong>TypeScript</strong
+              >/<strong>Vuex</strong>问题，解决过程记录在<strong
+                ><a class="blog" href="https://www.yuque.com/nfcjg/hd1otr"
+                  >博客</a
+                ></strong
+              >
+              里
+            </p>
+          </li>
+          <li>
+            <header>
+              <h3>共享博客</h3>
+              <span>
+                <a href="#">源码链接</a>
+                <a
+                  href="https://lixianlai-2.github.io/interactive-blog-preview/"
+                  >项目预览</a
+                >
+              </span>
+            </header>
+            <p>
+              这是一个基于
+              <strong>Vue</strong> 的多人共享博客
+            </p>
+            <p>
+              技术栈：vue-cli、<strong> vue-router</strong
+              >、vuex、axios、es6、<strong>element-ui</strong>
+            </p>
+            <p>
+              功能：首页展示所有作者的博客，详情页展示博客文章，实现登录与注册功能，也可以展示某个用户的所有博客，并可以编辑、删除、创建博客。<a
+                href="#"
+                >详细的动态图展示</a
+              >
+            </p>
+          </li>
+          <li>
+            <header>
+              <h3>来点披萨</h3>
+              <span>
+                <a href="#">源码链接</a>
+                <a href="#">项目预览</a>
+              </span>
+            </header>
+            <p>
+              这是一个
+              <strong>响应式</strong> 的点餐网站。
+            </p>
+            <p>
+              主要功能包括注册、用到多种<strong>CSS3</strong>效果，使用了部分<strong>jQuery</strong>实现元素操纵
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="skills">
+        <h2>技能</h2>
+        <div class="wrapper">
+          <div id="skills"></div>
+          <ul>
+            <li>熟悉页面制作技巧，能将设计稿<strong>完美还原</strong></li>
+            <li>
+              熟悉<strong>前后端分离</strong>技术，包括 AJAX、跨域、前端路由 等
+            </li>
+            <li>
+              熟练掌握 <strong>Vue全家桶</strong>的使用，包括
+              VueCli、VueRouter、Vuex 等
+            </li>
+            <li>熟悉 ES6，包括 let / Promise / await / 解构赋值等</li>
+            <li>
+              了解 <strong>TypeScript</strong> 的使用，我的项目就是 TS 实现的
+            </li>
+            <li>了解 <strong>Webpack 的配置和优化</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="openSource">
+        <h2>开源项目</h2>
+        <ul>
+          <li>
+            <header>
+              <h3>简易导航</h3>
+              <a href="https://lixianlai-2.github.io/nav/dist/index.html"
+                >源码链接</a
+              >
+              <a href="https://lixianlai-2.github.io/nav/dist/index.html"
+                >项目预览</a
+              >
+            </header>
+            <p>
+              实现了元素选择、元素创建、<strong>事件委托</strong>、滑动手势等常见功能
+            </p>
+          </li>
+          <li class="page2">
+            <header>
+              <h3>会动的皮卡丘</h3>
+              <span>
+                <a href="https://lixianlai-2.github.io/pikachu-real"
+                  >源码链接</a
+                >
+                <a href="https://lixianlai-2.github.io/pikachu-real/test.html"
+                  >项目预览</a
+                >
+              </span>
+            </header>
+            <p>这是我在学习 <strong>CSS3和动画</strong> 时制作的一个可爱作品</p>
+          </li>
+          <li>
+            <header>
+              <h3>Canvas画板</h3>
+              <span>
+                <a href="https://github.com/Lixianlai-2/Canvas-demo"
+                  >源码链接</a
+                >
+                <a href="https://lixianlai-2.github.io/Canvas-demo/"
+                  >项目预览</a
+                >
+              </span>
+            </header>
+            <p>我在学习 <strong>Canvas</strong> 时做的一个小作品</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="education">
+        <h2>教育经历</h2>
+        <p>
+          <span><time>2013年</time>~<time>2017年</time></span>
+          重庆邮电大学移通学院 本科
+        </p>
+      </section>
+    </article>
+    <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
